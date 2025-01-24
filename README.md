@@ -22,9 +22,16 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Event Management System with NestJS
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project is an example of the event management system built with NestJS, designed to handle events, organizers, and attendees seamlessly. It includes features for creating and managing events, organizing users, and tracking attendees, along with their relationships. The system leverages TypeORM for efficient database management and provides RESTful APIs for smooth integration.
+
+## Key Features:
+- **Event Management**: Create, update, and delete events with ease.
+- **User Roles**: Organizers can manage events, while attendees can register and participate.
+- **Relationships**: Establish and manage relationships between events, organizers, and attendees.
+- **Scalable Architecture**: Built with NestJS for modularity and scalability.
+- **TypeORM Integration**: Efficient database operations with TypeORM for PostgreSQL/MySQL.
 
 ## Installation
 
