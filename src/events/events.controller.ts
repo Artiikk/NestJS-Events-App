@@ -30,11 +30,11 @@ import { Like, MoreThan, Repository } from 'typeorm';
 import { Attendee } from './attendee/attendee.entity';
 import { EventsService } from './events.service';
 import { ListEvents } from './input/list.events';
-import { CurrentUser } from 'src/auth/decorators/current-user.decorator';
-import { User } from 'src/auth/user.entity';
-import { AuthGuardJwt } from 'src/auth/guards/auth-guard.jwt';
+import { User } from '../auth/user.entity';
+import { AuthGuardJwt } from '../auth/guards/auth-guard.jwt';
 import { PaginatedEventsDto } from './input/paginated-event.dto';
 import { plainToInstance } from 'class-transformer';
+import { CurrentUser } from '../auth/decorators/current-user.decorator';
 
 @Controller('/events')
 @SerializeOptions({ strategy: 'excludeAll' })
@@ -162,7 +162,7 @@ export class EventsController {
     const event = await this.eventsService.findOne(id);
 
     if (!event) {
-      throw new NotFoundException();
+      throw new NotFoundException(`Event with ID ${id} not found`);
     }
 
     if (event.organizerId !== user.id) {
