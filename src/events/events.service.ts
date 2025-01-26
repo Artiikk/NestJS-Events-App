@@ -108,7 +108,7 @@ export class EventsService {
     return await this.eventsRepository
       .createQueryBuilder('e')
       .delete()
-      .where('e.id = :id', { id })
+      .where('id = :id', { id })
       .execute();
   }
 
