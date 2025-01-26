@@ -36,4 +36,4 @@ lerna-debug.log*
 
 # environment variables
 dev.env
-e2e.wnv
+e2e.env
