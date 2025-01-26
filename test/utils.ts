@@ -1,7 +1,7 @@
 import { INestApplication } from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
-import { Connection } from 'typeorm';
+import { DataSource } from 'typeorm';
 import { AuthService } from './../src/auth/auth.service';
 import { User } from './../src/auth/user.entity';
 
@@ -16,7 +16,7 @@ export const tokenForUser = (
 };
 
 export const loadFixtures = async (
-  connection: Connection,
+  connection: DataSource,
   sqlFileName: string,
 ) => {
   const sql = fs.readFileSync(
